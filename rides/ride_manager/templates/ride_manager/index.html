@@ -1,0 +1,41 @@
+{% load static %}
+{% include "static/header.html" %}
+
+<p>&nbsp;</p>
+
+<div>
+    <h1>
+        <img src="{% static 'img/logo.jpg' %}" alt="GreenStars logo" style="float:left;width:100px;height:100px;">
+    </h1>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div>
+    <table class="table table-responsive table-striped table-sm">
+        <thead>
+          <tr>
+            <th scope="col">Start</th>
+            <th scope="col">Name</th>
+            <th scope="col">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+    {% if rides_list %}
+          {% for ride in rides_list %}
+            <tr class="text-nowrap">
+                <th scope="row">{{ride.start_date}}</th>
+                <td>{{ride.name}}</td>
+                <td><a class="btn btn-primary btn-sm" role="button" href="{% url 'ride_manager:show_ride' ride.id %}">details</a></td>
+            </tr>
+          {% endfor %}
+    {% else %}
+            <p>No Rides found :(</p>
+    {% endif %}
+        </tbody>
+    </table>
+</div>
+
+{% include "static/footer.html" %}

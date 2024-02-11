@@ -1,0 +1,46 @@
+{% load static %}
+{% include "static/header.html" %}
+
+<p>&nbsp;</p>
+
+<h3>{{ride.name}}</h3>
+
+<div>
+    <table class="table table-striped table-sm">
+        <tbody>
+            <tr>
+                <th scope="row">📅Start Date</th>
+                <td>{{ride.start_date}}</td>
+            </tr>
+            <tr>
+                <th scope="row">🗺️Route</th>
+                <td><a href="{{ride.route}}" target="_blank">{{ride.route}}</a></td>
+            </tr>
+            <tr>
+                <th scope="row">📍Meeting Point</th>
+                <td>{{ride.meeting_point}}</td>
+            </tr>
+            <tr>
+                <th scope="row">📏Distance</th>
+                <td>{{ride.distance}}</td>
+            </tr>
+            <tr>
+                <th scope="row">💨Speed</th>
+                <td>{{ride.speed}}</td>
+            <tr>
+                <th scope="row">🚴Type</th>
+                <td>{{ride.ride_type}}</td>
+            </tr>
+            <tr>
+                <th scope="row">☕Cafe Stop</th>
+                <td>{{ride.cafe_stop}}</td>
+            </tr>
+            <tr>
+                <th scope="row">🤓Comments</th>
+                <td>{{ride.comments|linebreaks}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% include "static/footer.html" %}

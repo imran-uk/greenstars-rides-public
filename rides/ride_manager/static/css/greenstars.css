@@ -1,0 +1,48 @@
+body  {
+    padding: 20px;
+}
+
+#greenstars-header {
+    /* text-align: center; */
+    ul {
+        float: left;
+    }
+    li {
+        padding: 0 6px;
+        float: left;
+        border-right: 1px solid #dadada;
+        display: inline;
+    }
+
+    li:last-child {
+        border: 0;
+    }
+}
+
+#greenstars-footer {
+    /* text-align: center; */
+    ul {
+        float: left;
+    }
+    li {
+        padding: 0 6px;
+        float: left;
+        border-right: 1px solid #dadada;
+        display: inline;
+    }
+
+    li:last-child {
+        border: 0;
+    }
+}
+
+#rides
+{
+    width: 400px;
+}
+
+
+#show_ride
+{
+    width: 400px;
+}
